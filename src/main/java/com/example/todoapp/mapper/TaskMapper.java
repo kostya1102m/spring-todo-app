@@ -4,6 +4,7 @@ package com.example.todoapp.mapper;
 import com.example.todoapp.dto.request.TaskCreateRequest;
 import com.example.todoapp.dto.request.TaskUpdateRequest;
 import com.example.todoapp.dto.response.TaskResponse;
+import com.example.todoapp.entity.Project;
 import com.example.todoapp.entity.Task;
 import com.example.todoapp.enums.TaskStatus;
 import org.springframework.stereotype.Component;
@@ -30,6 +31,7 @@ public class TaskMapper {
     }
 
     public TaskResponse toResponse(Task task){
+        Project project = task.getProject();
         return new TaskResponse(
                 task.getId(),
                 task.getTitle(),
@@ -37,6 +39,8 @@ public class TaskMapper {
                 task.getStatus(),
                 task.getPriority(),
                 task.getDeadline(),
+                project != null ? project.getId() : null,
+                project != null ? project.getName() : null,
                 task.getCreatedAt(),
                 task.getUpdatedAt()
         );

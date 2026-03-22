@@ -12,6 +12,8 @@ public record TaskResponse(
         TaskStatus status,
         TaskPriority priority,
         LocalDateTime deadline,
+        Long projectId,
+        String projectName,
         LocalDateTime createdAt,
         LocalDateTime updatedAt
 ) {}
