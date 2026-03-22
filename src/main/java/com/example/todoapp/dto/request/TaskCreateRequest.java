@@ -17,5 +17,7 @@ public record TaskCreateRequest(
         TaskPriority priority,
 
         @Future(message = "Дедлайн должен быть указан не раньше текущей даты")
-        LocalDateTime deadline
+        LocalDateTime deadline,
+
+        Long projectId
 ) {}
