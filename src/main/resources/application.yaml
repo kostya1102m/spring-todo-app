@@ -12,9 +12,9 @@ spring:
       hibernate:
         format_sql: true
 
-  springdoc:
-    swagger-ui:
-      path: /swagger
+springdoc:
+  swagger-ui:
+    path: /swagger
 
 
 server:
