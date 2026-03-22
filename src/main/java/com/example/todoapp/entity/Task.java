@@ -38,6 +38,10 @@ public class Task {
 
     private LocalDateTime deadline;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "project_id")
+    private Project project;
+
     @CreationTimestamp
     @Column(nullable = false)
     private LocalDateTime createdAt;
