@@ -20,6 +20,10 @@ springdoc:
   swagger-ui:
     path: /swagger
 
+jwt:
+  secret: ${SECRET_KEY}
+  expiration: 86400000
+
 
 server:
   port: 8080
