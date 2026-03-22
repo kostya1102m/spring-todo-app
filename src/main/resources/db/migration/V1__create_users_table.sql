@@ -6,5 +6,5 @@ CREATE TABLE users (
     last_name VARCHAR(100),
     role VARCHAR(50) NOT NULL DEFAULT 'USER',
     created_at TIMESTAMP NOT NULL DEFAULT NOW(),
-    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW()
 );
