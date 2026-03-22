@@ -33,6 +33,10 @@ public class Project {
     @Builder.Default
     private List<Task> tasks = new ArrayList<>();
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
+
     @CreationTimestamp
     @Column(updatable = false)
     private LocalDateTime createdAt;
