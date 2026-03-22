@@ -6,6 +6,7 @@ import com.example.todoapp.dto.response.TaskResponse;
 import com.example.todoapp.entity.Task;
 import com.example.todoapp.enums.TaskStatus;
 import com.example.todoapp.service.TaskService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@Tag(name = "Задачи", description = "Управление задачами и приоритетами")
 @RequestMapping("/api/v1/tasks")
 @RequiredArgsConstructor
 public class TaskController {
